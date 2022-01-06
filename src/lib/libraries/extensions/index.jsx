@@ -50,14 +50,16 @@ import aibotIconURL from './aibot/aibot.png';
 import aibotInsetIconURL from './aibot/aibot-small.svg';
 import aibotConnectionIconURL from './aibot/aibot-illustration.svg';
 import aibotConnectionSmallIconURL from './aibot/aibot-small.svg';
+import aibotPeripheralImage from './aibot/aibot-illustration.svg';
+import aibotMenuImage from './aibot/aibot-small.svg';
 
 export default [
     {
         name: 'AIBot',
         extensionId: 'aibot',
-        collaborator: 'JINI',
+        collaborator: 'JINI Co.,Ltd',
         iconURL: aibotIconURL,
-        insetIconURL: aibotInsetIconURL,
+        insetIconURL: aibotConnectionSmallIconURL,//aibotInsetIconURL,
         description: (
             <FormattedMessage
                 defaultMessage="Connect your projects with the world."
@@ -71,7 +73,8 @@ export default [
         internetConnectionRequired: false,
         launchPeripheralConnectionFlow: true,
         useAutoScan: false,
-        connectionIconURL: aibotConnectionIconURL,
+        
+        connectionIconURL: aibotConnectionSmallIconURL,//aibotConnectionIconURL
         connectionSmallIconURL: aibotConnectionSmallIconURL,
         connectingMessage: (
             <FormattedMessage
