@@ -46,7 +46,45 @@ import gdxforInsetIconURL from './gdxfor/gdxfor-small.svg';
 import gdxforConnectionIconURL from './gdxfor/gdxfor-illustration.svg';
 import gdxforConnectionSmallIconURL from './gdxfor/gdxfor-small.svg';
 
+import aibotIconURL from './aibot/aibot.png';
+import aibotInsetIconURL from './aibot/aibot-small.svg';
+import aibotConnectionIconURL from './aibot/aibot-illustration.svg';
+import aibotConnectionSmallIconURL from './aibot/aibot-small.svg';
+import aibotPeripheralImage from './aibot/aibot-illustration.svg';
+import aibotMenuImage from './aibot/aibot-small.svg';
+
 export default [
+    {
+        name: 'AIBot',
+        extensionId: 'aibot',
+        collaborator: 'JINI Co.,Ltd',
+        iconURL: aibotIconURL,
+        insetIconURL: aibotConnectionSmallIconURL,//aibotInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage="Connect your projects with the world."
+                description="Description for the 'AIBot' extension"
+                id="gui.extension.aibot.description"
+            />
+        ),
+        featured: true,
+        disabled: false,
+        bluetoothRequired: false,
+        internetConnectionRequired: false,
+        launchPeripheralConnectionFlow: true,
+        useAutoScan: false,
+        
+        connectionIconURL: aibotConnectionSmallIconURL,//aibotConnectionIconURL
+        connectionSmallIconURL: aibotConnectionSmallIconURL,
+        connectingMessage: (
+            <FormattedMessage
+                defaultMessage="Connecting"
+                description="Message to help people connect to their AIBot."
+                id="gui.extension.aibot.connectingMessage"
+            />
+        ),
+        helpLink: 'https://www.jinirobot.com'
+    },
     {
         name: (
             <FormattedMessage
