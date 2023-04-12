@@ -53,7 +53,308 @@ import aibotConnectionSmallIconURL from './aibot/aibot-small.svg';
 import aibotPeripheralImage from './aibot/aibot-illustration.svg';
 import aibotMenuImage from './aibot/aibot-small.svg';
 
-export default [
+import ml2scratchIconURL from './ml2scratch/ml2scratch.png';
+import ml2scratchInsetIconURL from './ml2scratch/ml2scratch-small.png';
+
+import tm2scratchIconURL from './tm2scratch/tm2scratch.png';
+import tm2scratchInsetIconURL from './tm2scratch/tm2scratch-small.png';
+
+import tmpose2scratchIconURL from './tmpose2scratch/tmpose2scratch.png';
+import tmpose2scratchInsetIconURL from './tmpose2scratch/tmpose2scratch-small.png';
+
+import facemesh2scratchIconURL from './facemesh2scratch/facemesh2scratch.png';
+import facemesh2scratchInsetIconURL from './facemesh2scratch/facemesh2scratch-small.png';
+
+import handpose2scratchIconURL from './handpose2scratch/handpose2scratch.png';
+import handpose2scratchInsetIconURL from './handpose2scratch/handpose2scratch-small.png';
+
+import ic2scratchIconURL from './ic2scratch/ic2scratch.png';
+import ic2scratchInsetIconURL from './ic2scratch/ic2scratch-small.png';
+
+import posenet2scratchIconURL from './posenet2scratch/posenet2scratch.png';
+import posenet2scratchInsetIconURL from './posenet2scratch/posenet2scratch-small.png';
+
+import speech2scratchIconURL from './speech2scratch/speech2scratch.png';
+import speech2scratchInsetIconURL from './speech2scratch/speech2scratch-small.png';
+
+export default [           
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="Speech Recognition"
+                description="Name for the Speech Recognition extension"
+                id="gui.extension.speech2scratch.name"
+            />
+        ),
+        //name: 'Speech2Scratch',
+        extensionId: 'speech2scratch',
+        extensionURL: '',
+        collaborator: 'JINI Co.,Ltd',
+        iconURL: speech2scratchIconURL,
+        insetIconURL: speech2scratchInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage="Speech2Scratch Blocks."
+                description="Description for Speech2Scratch Blocks."
+                id="gui.extension.speech2scratch.description"
+            />
+        ),
+        featured: true,
+        disabled: false,
+        bluetoothRequired: false,
+        internetConnectionRequired: true,
+        helpLink: 'https://www.jinirobot.com',
+        translationMap: {            
+            'en': {
+                'gui.extension.speech2scratch.description': 'Recognize your voice.'
+            },
+            'ko': {
+                'gui.extension.speech2scratch.description': '음성인식'
+            }
+        }
+    },
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="PoseNet Recognition"
+                description="Name for the PoseNet Recognition extension"
+                id="gui.extension.posenet2scratch.name"
+            />
+        ),
+        //name: 'posenet2Scratch',
+        extensionId: 'posenet2scratch',
+        extensionURL: '',//'https://champierre.github.io/posenet2scratch/posenet2scratch.mjs',
+        collaborator: 'JINI Co.,Ltd',
+        iconURL: posenet2scratchIconURL,
+        insetIconURL: posenet2scratchInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage="Obtain the coordinates of each part of the body."
+                description="Description for PoseNet2Scratch Blocks."
+                id="gui.extension.posenet2scratch.description"
+            />
+        ),
+        featured: true,
+        disabled: false,
+        bluetoothRequired: false,
+        internetConnectionRequired: true,
+        helpLink: 'https://www.jinirobot.com',
+        translationMap: {          
+            'en': {
+                'gui.extension.posenet2scratch.description': 'Recognize your poses.'
+            },
+            'ko': {
+                'gui.extension.posenet2scratch.description': '자세를 인식해볼까요'
+            }
+        }
+    },
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="Image Recognition"
+                description="Name for the Image Recognition extension"
+                id="gui.extension.ic2scratchblocks.name"
+            />
+        ),
+        //name: 'ImageClassifier2Scratch',
+        extensionId: 'ic2scratch',
+        collaborator: 'JINI Co.,Ltd',
+        iconURL: ic2scratchIconURL,
+        insetIconURL: ic2scratchInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage='ImageClassifier2Scratch'
+                description='Image Classifier Blocks.'
+                id='gui.extension.ic2scratchblocks.description'
+            />
+        ),
+        featured: true,
+        disabled: false,
+        internetConnectionRequired: true,
+        bluetoothRequired: false,
+        helpLink: 'https://www.jinirobot.com',
+        translationMap: {            
+            'en': {
+                'gui.extension.ic2scratchblocks.description': 'Classify an image.'
+            },
+            'ko': {
+                'gui.extension.ic2scratchblocks.description': '이미지를 분류해볼까요'
+            }
+        }
+    },
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="Hand Recognition"
+                description="Name for the Hand Recognition extension"
+                id="gui.extension.handpose2scratchblocks.name"
+            />
+        ),
+        //name: 'Handpose2Scratch',
+        extensionId: 'handpose2scratch',
+        collaborator: 'JINI Co.,Ltd',
+        iconURL: handpose2scratchIconURL,
+        insetIconURL: handpose2scratchInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage='Handpose2Scratch'
+                description='HandPose2Scratch Blocks.'
+                id='gui.extension.handpose2scratchblocks.description'
+            />
+        ),
+        featured: true,
+        disabled: false,
+        internetConnectionRequired: true,
+        bluetoothRequired: false,
+        helpLink: 'https://www.jinirobot.com',
+        translationMap: {            
+            'en': {
+                'gui.extension.handpose2scratchblocks.description': 'Recognize your own hand.'
+            },
+            'ko': {
+                'gui.extension.handpose2scratchblocks.description': '나의 손동작을 인식해볼까요'
+            }
+        }
+    },
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="Face Recognition"
+                description="Name for the Face Recognition extension"
+                id="gui.extension.facemesh2scratch.name"
+            />
+        ),
+        //name: 'Facemesh2Scratch',
+        extensionId: 'facemesh2scratch',
+        collaborator: 'JINI Co.,Ltd',
+        iconURL: facemesh2scratchIconURL,
+        insetIconURL: facemesh2scratchInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage='Facemesh2Scratch'
+                description='Face Tracking'
+                id='gui.extension.facemesh2scratch.description'
+            />
+        ),
+        featured: true,
+        disabled: false,
+        internetConnectionRequired: true,
+        bluetoothRequired: false,
+        helpLink: 'https://www.jinirobot.com',
+        translationMap: {            
+            'en': {
+                'gui.extension.facemesh2scratch.description': 'Recognize your own face.'
+            },
+            'ko': {
+                'gui.extension.facemesh2scratch.description': '나의 얼굴 동작을 인식해볼까요'
+            }
+        }
+
+    },
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="Pose Recognition"
+                description="Name for the Pose Recognition extension"
+                id="gui.extension.tmpose2scratchblocks.name"
+            />
+        ),
+        //name: 'TMPose2Scratch',
+        extensionId: 'tmpose2scratch',
+        collaborator: 'JINI Co.,Ltd',
+        iconURL: tmpose2scratchIconURL,
+        insetIconURL: tmpose2scratchInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage='TMPose2Scratch Blocks.'
+                description='Recognize your own poses.'
+                id='gui.extension.tmpose2scratchblocks.description'
+            />
+        ),
+        featured: true,
+        disabled: false,
+        internetConnectionRequired: true,
+        bluetoothRequired: false,
+        helpLink: 'https://www.jinirobot.com',
+        translationMap: {            
+            'en': {
+                'gui.extension.tmpose2scratchblocks.description': 'Recognize your own poses.'
+            },
+            'ko': {
+                'gui.extension.tmpose2scratchblocks.description': '나의 몸동작 포즈를 인식해볼까요'
+            }
+        }
+    },
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="Machine Learning"
+                description="Name for the Machine Learning extension"
+                id="gui.extension.ml2scratch.name"
+            />
+        ),
+        //name: 'ML2Scratch',
+        extensionId: 'ml2scratch',
+        extensionURL: '',//'https://champierre.github.io/ml2scratch/ml2scratch.mjs',
+        collaborator: 'JINI Co.,Ltd',
+        iconURL: ml2scratchIconURL,
+        insetIconURL: ml2scratchInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage="ML2Scratch Blocks."
+                description="Description for ML2Scratch Blocks."
+                id="gui.extension.ml2scratch.description"
+            />
+        ),
+        featured: true,
+        disabled: false,
+        bluetoothRequired: false,
+        internetConnectionRequired: true,
+        helpLink: 'https://www.jinirobot.com', 
+        translationMap: {           
+            'ko': {
+                'gui.extension.ml2scratch.description': '머신러닝'
+            },
+            'en': {
+                'gui.extension.ml2scratch.description': 'machine learning'
+            },
+        }
+    },
+    {
+        name: (
+            <FormattedMessage
+                defaultMessage="Teachable Machine"
+                description="Name for the Teachable Machine extension"
+                id="gui.extension.tm2scratch.name"
+            />
+        ),
+        //name: 'TM2Scratch',
+        extensionId: 'tm2scratch',
+        extensionURL: '',
+        collaborator: 'JINI Co.,Ltd',
+        iconURL: tm2scratchIconURL,
+        insetIconURL: tm2scratchInsetIconURL,
+        description: (
+            <FormattedMessage
+                defaultMessage="TM2Scratch Blocks."
+                description="Description for TM2Scratch Blocks."
+                id="gui.extension.tm2scratch.description"
+            />
+        ),
+        featured: true,
+        disabled: false,
+        bluetoothRequired: false,
+        internetConnectionRequired: true,
+        helpLink: 'https://www.jinirobot.com',
+        translationMap: {
+            'ko': {
+                'gui.extension.tm2scratch.description': '티처블머신'
+            },
+            'en': {
+                'gui.extension.tm2scratch.description': 'teachable machine'
+            },
+        }
+    },
     {
         name: 'AIBot',
         extensionId: 'aibot',
